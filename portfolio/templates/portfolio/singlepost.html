@@ -2,10 +2,21 @@
 <html>
 <head>
 	<title>{{ post.post_title }}</title>
+
+	<meta property="og:type" content="article" />
+	<meta property="og:locale" content="en_US" />  
+	<meta property="article:author" content="https://www.facebook.com/hassanabidpk89" />
+	<meta property="og:title"
+content="{{ post.post_title }}" />
+<meta property="og:description"
+content="{{ post.post_content}}" />
+<meta property="og:image"
+content="http://i.imgur.com/lrmHFv8.jpg" />
+
 </head>
 <body>
 <h1>{{ post.post_title }}</h1>
-<p>{{ post.post_content }}</p>
+<p>{{ post.post_content |safe }}</p>
 <br>
 <br>
 <h4>Written by {{ post.post_author}}</h4>
