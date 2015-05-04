@@ -37,4 +37,4 @@ def blog(request):
 
 def post(request,post_id):
 	post = get_object_or_404(Blog,pk=post_id)
-	return HttpResponse("You 're looking at post with id %s." % post_id)
+	return render(request, 'portfolio/singlepost.html', {'post': post})
