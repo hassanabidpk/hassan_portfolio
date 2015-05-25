@@ -38,3 +38,9 @@ def blog(request):
 def post(request,post_id):
 	post = get_object_or_404(Blog,pk=post_id)
 	return render(request, 'portfolio/singlepost.html', {'post': post})
+
+
+def contact(request):
+	return HttpResponse9("Contact us ")
+
+	

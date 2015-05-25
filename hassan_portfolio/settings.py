@@ -55,6 +55,7 @@ ROOT_URLCONF = 'hassan_portfolio.urls'
 
 TEMPLATES = [
     {
+    # django.template.backends.jinja2.Jinja2
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
@@ -67,6 +68,17 @@ TEMPLATES = [
             ],
         },
     },
+    # {
+    #     'BACKEND': 'django.template.backends.jinja2.Jinja2',
+    #     'NAME': 'jinja2', 
+    #     'DIRS': [],
+    #     'APP_DIRS': True,
+    #     'OPTIONS': {
+    #         'environment' : 'jinja2_env.environment',
+    #         'autoescape': True,
+
+    #     },
+    # },
 ]
 
 WSGI_APPLICATION = 'hassan_portfolio.wsgi.application'
@@ -106,22 +118,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+# Heroku settings
+# import dj_database_url
+# DATABASES['default'] =  dj_database_url.config()
 
-# Honor the 'X-Forwarded-Proto' header for request.is_secure()
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# # Honor the 'X-Forwarded-Proto' header for request.is_secure()
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
+# # Allow all host headers
+# ALLOWED_HOSTS = ['*']
 
-# Static asset configuration
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
+# # Static asset configuration
+# # import os
+# # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# STATIC_ROOT = 'staticfiles'
+# # STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 

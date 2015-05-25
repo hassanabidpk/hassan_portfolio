@@ -7,4 +7,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
     url(r'^portfolio/', include('portfolio.urls', namespace="portfolio")),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', include('portfolio.urls', namespace="portfolio")),
+    url(r'^blog/', include('portfolio.urls', namespace="portfolio")),
+
 ]

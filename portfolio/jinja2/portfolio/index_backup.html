@@ -1,0 +1,22 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resume</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'portfolio/style.css' %}" />
+</head>
+<body>
+<h1>Resume</h1>
+<a href="{{ url('admin:index') }}">Administration</a>
+{% if latest_resume_list %}
+    <ul>
+    {% for resume in latest_resume_list %}
+        <li><a href="{% url 'portfolio:detail' resume.id %}">{{ resume.first_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Resume available.</p>
+{% endif %}
+
+</body>
+</html>
