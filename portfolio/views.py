@@ -33,7 +33,10 @@ def view(request,resume_id):
 
 def blog(request):
 	# post = get_object_or_404(Blog,pk=post_id)
-	return HttpResponse("You 're looking at post with id %s." % "blog")
+	resume = get_object_or_404(Resume,pk=1)	
+	return render(request,'portfolio/blog_home.html', {'resume' : resume})
+	
+	# return HttpResponse("You 're looking at post with id %s." % "blog")
 
 def post(request,post_id):
 	post = get_object_or_404(Blog,pk=post_id)
