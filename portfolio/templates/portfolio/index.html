@@ -25,37 +25,43 @@
     <meta property="og:url" content="http://hassanabid.com" />
 
   </head>
-
-  <nav class="white" role="navigation">
+  <div class="navbar-fixed">
+  <nav class="red" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo">Hassan Abid</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="/blog/home">Blog</a></li>
+        <li><a href="#">News</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="/blog/home">Blog</a></li>
+        <li><a href="#">News</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
   </nav>
+  </div>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax Template</h1>
+        <br><br><br><br>
+        <h1 class="header center white-text text-lighten-2">Learn &amp; Code</h1>
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 grey-text lighten-5 light">Motto: Write beautiful, simple and expresive code</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light green lighten-1">Get Started</a>
         </div>
         <br><br>
-
       </div>
     </div>
-    <div class="parallax"><img src="{% static 'portfolio/images/background1.jpg' %}" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="{% static 'portfolio/images/sunglasses-apple-iphone-desk.jpg' %}" alt="Unsplashed background img 2"></div>
   </div>
 
 
@@ -64,31 +70,125 @@
 
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-image-flash-on"></i></h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
+      <div class="col s12 m6 l6">
+          <ul class="collection">
+           <li class="collection-item avatar">
+            <img src="{% static 'portfolio/images/android.jpg' %}" alt="" class="circle">
+            <span class="title">Android</span>
+            <p class="grey-text darken-1">App development<br>
+              <span class="green-text">KineMaster,Seoul Mate </span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+            <li class="collection-item avatar">
+            <img src="{% static 'portfolio/images/java.png' %}" alt="" class="circle">
+            <span class="title">Title</span>
+            <p class="grey-text darken-1">First Line <br>
+              <span class="green-text">Second Line </span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/objectc.png' %}" alt="" class="circle">
+            <span class="title">Title</span>
+            <p class="grey-text darken-1">First Line <br>
+              <span class="green-text">Second Line</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+           <img src="{% static 'portfolio/images/swift.png' %}" alt="" class="circle">
+            <span class="title">Title</span>
+            <p class="grey-text darken-1">First Line <br>
+               <span class="green-text">Second Line</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/php.jpg' %}" alt="" class="circle">
+            <span class="title">PHP</span>
+            <p class="grey-text darken-1">MVC, Laravel, Phalcon <br>
+              <span class="green-text">Global MOOC Campus</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/python.png' %}" alt="" class="circle">
+            <span class="title">Python</span>
+            <p class="grey-text darken-1">Django, Google App Engine <br>
+              <span class="green-text">Portfolio site, Seoul Mate, MOOC Circle</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/github.png' %}" alt="" class="circle">
+            <span class="title">Github</span>
+            <p class="grey-text darken-1">Git, Gerrit Code Review<br>
+              <span class="green-text">hassanabidpk</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+        </ul>
         </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-social-group"></i></h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="mdi-action-settings"></i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
+        <div class="col s12 m6 l6">
+          <ul class="collection">
+            <li class="collection-item avatar">
+            <img src="{% static 'portfolio/images/gcloud.png' %}" alt="" class="circle">
+            <span class="title">Google Cloud Platform</span>
+            <p class="grey-text darken-1">App Engine <br>
+               <a href=""><span class="green-text">Personal blog(Udacity)</span></a>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade green-icon"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/django.png' %}" alt="" class="circle">
+            <span class="title">Django Web Framework</span>
+            <p class="grey-text darken-1">First Line <br>
+             <span class="green-text">Second Line</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+           <img src="{% static 'portfolio/images/angular.jpg' %}" alt="" class="circle">
+            <span class="title">Angular JS</span>
+            <p class="grey-text darken-1">Front end<br>
+             <span class="green-text">Portfolio site</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/parse.jpeg' %}" alt="" class="circle">
+            <span class="title">Parse</span>
+            <p class="grey-text darken-1">Mobile and Web cloud banckend<br>
+             <span class="green-text">Second Line</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/express.png' %}" alt="" class="circle">
+            <span class="title">Express JS</span>
+            <p class="grey-text darken-1">Web Framework<br>
+             <span class="green-text">Second Line</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/jenkins.png' %}" alt="" class="circle">
+            <span class="title">Jenkins</span>
+            <p class="grey-text darken-1">Web Framework<br>
+             <span class="green-text">Second Line</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+             <img src="{% static 'portfolio/images/shell.png' %}" alt="" class="circle">
+            <span class="title">Shell Script</span>
+            <p class="grey-text darken-1">Automation for android and ios Build<br>
+             <span class="green-text">NexPlayerSDK,Seoul Mate</span>
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+        </ul>
         </div>
       </div>
 
@@ -99,41 +199,110 @@
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <div class="row right-align">
+          <h5 class="header col s12 white-text light">Learn by doing</h5>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="{% static 'portfolio/images/background3.jpg' %}" alt="Unsplashed background img 2"></div>
+    <div class="parallax"><img src="{% static 'portfolio/images/source_code.jpg' %}" alt="Unsplashed background img 2"></div>
   </div>
 
   <div class="container">
     <div class="section">
-
       <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'portfolio/images/apple-iphone-books-desk.jpg' %}">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">KineMaster<i class="mdi-navigation-more-vert right"></i></span>
+            </div>
+             <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">KineMaster <i class="mdi-navigation-close right"></i></span>
+          <p></p>
+        </div>
+            <div class="card-action">
+              <a href="#">Category</a>
+              <a href='#'>Tags</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'portfolio/images/apple-laptop-notebook-notes.jpg' %}">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">NexPlayer SDK<i class="mdi-navigation-more-vert right"></i></span>
+            </div>
+             <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">NexPlayer SDK <i class="mdi-navigation-close right"></i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+            <div class="card-action">
+             <a href="#">Category</a>
+              <a href='#'>Tags</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'portfolio/images/mountains-nature-sunny-bridge.jpg' %}">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Seoul Mate<i class="mdi-navigation-more-vert right"></i></span>
+            </div>
+            <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Seoul Mate<i class="mdi-navigation-close right"></i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+            <div class="card-action">
+              <a href="#">Category</a>
+              <a href='#'>Tags</a>
+            </div>
+          </div>
         </div>
       </div>
-
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="{% static 'portfolio/images/wood-landscape-mountains-nature.jpg' %}">
+            </div>
+            <div class="card-content">
+            <span class="card-title activator grey-text text-darken-4">Global MOOC Campus<i class="mdi-navigation-more-vert right"></i></span>
+             <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+        </div>
+            </div>
+            <div class="card-action">
+              <a href="#"><span class="purple-text darken-4">Category</span></a>
+              <a href='#'>Tags</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
+  <div class="section"></div>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h3 class="header col s12 light">My dream is get at top of K2 summit!</h3>
         </div>
       </div>
     </div>
-    <div class="parallax"><img src="{% static 'portfolio/images/background2.jpg' %}" alt="Unsplashed background img 3"></div>
+    <div class="parallax"><img src="{% static 'portfolio/images/k2_1.jpg' %}" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer red">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -172,6 +341,5 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="{% static 'portfolio/js/materialize.js' %}"></script>
   <script src="{% static 'portfolio/js/init.js' %}"></script>
-
   </body>
 </html>
