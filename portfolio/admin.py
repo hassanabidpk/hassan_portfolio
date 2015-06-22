@@ -17,10 +17,10 @@ class ResumeAdmin(admin.ModelAdmin):
 	search_fields = ['first_name', 'last_name']
 
 class BlogAdmin(admin.ModelAdmin):
-	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content"]}),
+	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content","post_photo"]}),
 	('Date Information',{ 'fields': ['post_published'], 'classes': ['collapse']}),]
 
-	list_display = ('post_author', 'post_title', 'post_content','post_published','post_modified')
+	list_display = ('post_author', 'post_title', 'post_content','post_photo','post_published','post_modified')
 	list_filter = ['post_modified','post_published']
 	search_fields = ['post_title', 'post_content']
 

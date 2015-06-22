@@ -33,6 +33,7 @@ class Blog(models.Model):
 	post_author = models.CharField(max_length=250)
 	post_name = models.CharField(max_length=400)
 	post_title = models.CharField(max_length=400)
+	post_photo = models.ImageField(upload_to='posts')
 	post_content = models.TextField()
 	post_modified =  models.DateTimeField('date modified',default=datetime.datetime.now())
 	post_published =  models.DateTimeField('date published',default=datetime.datetime.now())
