@@ -11,7 +11,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
 <!--     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'> -->
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- CSS  -->
   <link href="{% static 'portfolio/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="{% static 'portfolio/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -33,14 +33,14 @@
         <li><a href="#">Skills</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">MOOC</a></li>
-        <li><a href="/blog">Blog</a></li>
+        <li><a href="/blog/latest">Blog</a></li>
         <li><a href="#">News</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Skills</a></li>
         <li><a href="#">Projects</a></li>
-        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/blog/latest">Blog</a></li>
         <li><a href="#">News</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -83,25 +83,25 @@
           </li>
             <li class="collection-item avatar">
             <img src="{% static 'portfolio/images/java.png' %}" alt="" class="circle">
-            <span class="title">Title</span>
-            <p class="grey-text darken-1">First Line <br>
-              <span class="green-text">Second Line </span>
+            <span class="title">Java</span>
+            <p class="grey-text darken-1">Algorithms, Android <br>
+              <span class="green-text">App Development </span>
             </p>
             <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
           </li>
           <li class="collection-item avatar">
              <img src="{% static 'portfolio/images/objectc.png' %}" alt="" class="circle">
-            <span class="title">Title</span>
-            <p class="grey-text darken-1">First Line <br>
-              <span class="green-text">Second Line</span>
+            <span class="title">Objective-C</span>
+            <p class="grey-text darken-1">SDK and App Development <br>
+              <span class="green-text">NexPlayerSDK, Seoul Mate</span>
             </p>
             <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
           </li>
           <li class="collection-item avatar">
            <img src="{% static 'portfolio/images/swift.png' %}" alt="" class="circle">
-            <span class="title">Title</span>
-            <p class="grey-text darken-1">First Line <br>
-               <span class="green-text">Second Line</span>
+            <span class="title">Swift</span>
+            <p class="grey-text darken-1">App Development<br>
+               <span class="green-text">NexPlayer, Awera app</span>
             </p>
             <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
           </li>
@@ -177,7 +177,7 @@
              <img src="{% static 'portfolio/images/jenkins.png' %}" alt="" class="circle">
             <span class="title">Jenkins</span>
             <p class="grey-text darken-1">Web Framework<br>
-             <span class="green-text">Second Line</span>
+             <span class="green-text">Automation of NexPlayerSDK</span>
             </p>
             <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
           </li>
@@ -224,8 +224,8 @@
           <p></p>
         </div>
             <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
+              <a href="#" style="color: #ff4081;">Category</a>
+              <a href='#'></a>
             </div>
           </div>
         </div>
@@ -243,8 +243,8 @@
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
             <div class="card-action">
-             <a href="#">Category</a>
-              <a href='#'>Tags</a>
+             <a href="#" style="color: #ff4081;">Category</a>
+              <a href='#'></a>
             </div>
           </div>
         </div>
@@ -262,8 +262,8 @@
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
             <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
+              <a href="#" style="color: #ff4081;">Category</a>
+              <a href='#'></a>
             </div>
           </div>
         </div>
@@ -282,8 +282,8 @@
           <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
             <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
+              <a href="#" style="color: #ff4081;">Category</a>
+              <a href='#'></a>
             </div>
           </div>
         </div>
@@ -293,15 +293,15 @@
               <img src="{% static 'portfolio/images/mountains-nature-sunny-bridge.jpg' %}">
             </div>
             <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">MOOC Campus<i class="mdi-navigation-more-vert right"></i></span>
+            <span class="card-title activator grey-text text-darken-4">Awera App (iOS)<i class="mdi-navigation-more-vert right"></i></span>
             </div>
             <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Global MOOC Campus<i class="mdi-navigation-close right"></i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          <span class="card-title grey-text text-darken-4">Awera <i class="mdi-navigation-close right"></i></span>
+          <p>App for sending mobile cards to loved ones in Ethopia</p>
         </div>
             <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
+              <a href="#" style="color: #ff4081;">Category</a>
+              <a href='#'></a>
             </div>
           </div>
         </div>
@@ -311,15 +311,15 @@
               <img src="{% static 'portfolio/images/mountains-nature-sunny-bridge.jpg' %}">
             </div>
             <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Seoul Mate<i class="mdi-navigation-more-vert right"></i></span>
+            <span class="card-title activator grey-text text-darken-4">Django Girls - Seoul<i class="mdi-navigation-more-vert right"></i></span>
             </div>
             <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Seoul Mate<i class="mdi-navigation-close right"></i></span>
-          <p>Here is some more information about this product that is only revealed once clicked on.</p>
+          <span class="card-title grey-text text-darken-4">Django Girls - Seoul<i class="mdi-navigation-close right"></i></span>
+          <p>Coming soon :)</p>
         </div>
             <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
+              <a href="#" style="color: #ff4081;">Category</a>
+              <a href='#'></a>
             </div>
           </div>
         </div>
@@ -370,6 +370,8 @@
     <div class="footer-copyright">
       <div class="container">
       Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      and <a class="teal-text text-darken-4" 
+       href="http://djangoproject.com">Django</a>
       </div>
     </div>
   </footer>

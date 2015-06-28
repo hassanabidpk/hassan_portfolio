@@ -63,62 +63,15 @@
             <p><a href="/blog/{{ post.id }}">Read more</a></p>
             </div>
             <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
+              <a style="color: #ff4081;" href="#"><span class="text-blue text-accent-2">{{ post.post_category }}</span></a>
+              <a style="color: #ff80ab;" href='#'>{{ post.post_tags }}</a>
             </div>
           </div>
         </div>
         {% endfor %}
         {% else %}
-        <p>No posts are available.</p>
+        <h3>No posts are available.</h3>
         {% endif %}
-         <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="{% static 'portfolio/images/apple-laptop-notebook-notes.jpg' %}">
-            </div>
-            <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">Read more</a></p>
-            </div>
-            <div class="card-action">
-             <a href="#">Category</a>
-              <a href='#'>Tags</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="{% static 'portfolio/images/mountains-nature-sunny-bridge.jpg' %}">
-            </div>
-            <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">Read more</a></p>
-            </div>
-            <div class="card-action">
-              <a href="#">Category</a>
-              <a href='#'>Tags</a>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="{% static 'portfolio/images/wood-landscape-mountains-nature.jpg' %}">
-            </div>
-            <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">Read more</a></p>
-            </div>
-            <div class="card-action">
-              <a href="#"><span class="purple-text darken-4">Category</span></a>
-              <a href='#'>Tags</a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
     <br><br>
@@ -158,6 +111,8 @@
     <div class="footer-copyright">
       <div class="container">
       Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      and <a class="yellow-text text-darken-4" 
+       href="http://djangoproject.com">Django</a>
       </div>
     </div>
   </footer>

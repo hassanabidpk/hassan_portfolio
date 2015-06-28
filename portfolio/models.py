@@ -39,6 +39,9 @@ class Blog(models.Model):
 	post_published =  models.DateTimeField('date published',default=datetime.datetime.now())
 	post_type = models.CharField(max_length=200)
 	comment_count = models.IntegerField(default=0)
+	post_category = models.CharField(max_length=200, default="programming")
+	post_tags = models.CharField(max_length=200,default="code")
+	post_code = models.TextField(default="")
 
 	def __str__(self):
 		return self.post_title

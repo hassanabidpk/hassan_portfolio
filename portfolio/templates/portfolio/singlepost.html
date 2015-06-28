@@ -1,26 +1,121 @@
-<!DOCTYPE <!DOCTYPE html>
-<html>
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>{{ post.post_title }}</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title{{ post.post_title}}</title>
 
-	<meta property="og:type" content="article" />
-	<meta property="og:locale" content="en_US" />  
-	<meta property="article:author" content="https://www.facebook.com/hassanabidpk89" />
-	<meta property="og:title"
-content="{{ post.post_title }}" />
-<meta property="og:description"
-content="{{ post.post_content} }" />
-<meta property="og:image"
-content="http://i.imgur.com/lrmHFv8.jpg" />
-
+  <!-- CSS  -->
+  <link href="{% static 'portfolio/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'portfolio/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1>{{ post.post_title }}</h1>
-<p>{{ post.post_content |safe }}</p>
-<br>
-<br>
-<h4>Written by {{ post.post_author}}</h4>
-<p>Posted {{ post.post_modified }}</p>
+  <nav class="green" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">{{ post.post_title}}</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/blog/latest">Blog</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
 
-</body>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/blog/latest/">Blog</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+  <!-- <div class="parallax-container" id="index-banner"> -->
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m6 l6 offset-m3 offset-l3"></div>
+            <h5>{{ post.post_content|safe}}</h5>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+        {% if post.post_category %}
+          <a class="waves-effect waves-light btn pink accent-2"><i 
+          class="material-icons left"></i>{{ post.post_category}}</a>
+         {% endif %}
+        {% if post.post_category %}
+          <a class="waves-effect waves-light btn pink accent-3"><i 
+          class="material-icons left"></i>{{ post.post_tags }}</a>
+         {% endif %}
+        </div>
+      </div>
+      <div class="divider"></div>
+       {% if post.post_photo %}
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m6 l6">
+            <div class="responsive-img"><img src="{{ post.post_photo.url }}" width="800"></div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  <!-- </div> -->
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    <a class="btn-floating btn-large pink accent-2">
+      <i class="large material-icons">share</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating blue darken-1"><i class="fa  fa-linkedin  fa-2x" style="color:#fff;"></i></a></li>
+      <li><a class="btn-floating light-blue darken-4"><i class="fa  fa-facebook  fa-2x"></i></a></li>
+      <li><a class="btn-floating light-blue accent-3"><i class="fa  fa-twitter  fa-2x"></i></a></li>
+      <li><a class="btn-floating red darken-2"><i class="fa fa-google-plus fa-2x"></i></a></li>
+    </ul>
+  </div>
+
+  <footer class="page-footer green">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About me</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Blog</a></li>
+            <li><a class="white-text" href="#!">MOOC Circle</a></li>
+            <li><a class="white-text" href="#!">Seoul Mate</a></li>
+            <li><a class="white-text" href="#!">Linkedin</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Twitter</a></li>
+            <li><a class="white-text" href="#!">Github</a></li>
+            <li><a class="white-text" href="#!">Medium</a></li>
+            <li><a class="white-text" href="#!">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made with <a class="orange-text text-lighten-3" 
+      href="http://materializecss.com">Materialize</a> and
+       <a class="teal-text text-darken-4" 
+       href="http://djangoproject.com">Django</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'portfolio/js/materialize.js' %}"></script>
+  <script src="{% static 'portfolio/js/init.js' %}"></script>
+
+  </body>
 </html>
