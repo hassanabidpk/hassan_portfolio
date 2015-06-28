@@ -117,7 +117,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_ROOT = '/Users/hassanabid/Documents/hassan/Django_flask/django_hassan_web/hassan_portfolio/'
+MEDIA_URL = '/media/'
 # Heroku settings
 # import dj_database_url
 # DATABASES['default'] =  dj_database_url.config()

@@ -51,14 +51,16 @@
 
       <!--   Icon Section   -->
       <div class="row">
+      {% if blog_posts %}
+      {% for post in blog_posts %}
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="{% static 'portfolio/images/apple-iphone-books-desk.jpg' %}">
+              <img src="{{ post.post_photo.url }}">
             </div>
             <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Card Title</span>
-            <p><a href="#">Read more</a></p>
+            <span class="card-title activator grey-text text-darken-4">{{ post.post_title}}</span>
+            <p><a href="/blog/{{ post.id }}">Read more</a></p>
             </div>
             <div class="card-action">
               <a href="#">Category</a>
@@ -66,7 +68,10 @@
             </div>
           </div>
         </div>
-
+        {% endfor %}
+        {% else %}
+        <p>No posts are available.</p>
+        {% endif %}
          <div class="col s12 m4">
           <div class="card">
             <div class="card-image">

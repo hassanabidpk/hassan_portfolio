@@ -33,10 +33,15 @@ def view(request,resume_id):
 
 def blog(request):
 	# post = get_object_or_404(Blog,pk=post_id)
-	resume = get_object_or_404(Resume,pk=1)	
-	return render(request,'portfolio/blog_home.html', {'resume' : resume})
-	
-	# return HttpResponse("You 're looking at post with id %s." % "blog")
+	blog_posts = Blog.objects.order_by('-post_published')
+	context = {'blog_posts': blog_posts}
+	return render(request, 'portfolio/blog_home.html', context)
+
+def latest(request):
+	# post = get_object_or_404(Blog,pk=post_id)
+	latest_posts = Blog.objects.order_by('-post_published')[:5]
+	context = {'blog_posts': latest_posts}
+	return render(request, 'polls/index.html', context)
 
 def post(request,post_id):
 	post = get_object_or_404(Blog,pk=post_id)
