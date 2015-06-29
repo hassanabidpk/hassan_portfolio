@@ -1,3 +1,5 @@
 *.pyc
+portfolio/*.pyc
 hassan_portfolio/settings.py
 portfolio/migrations
+posts/*
