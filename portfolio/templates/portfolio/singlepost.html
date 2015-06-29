@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title{{ post.post_title}}</title>
+  <title>{{ post.post_title}}</title>
 
  <!-- <link href="{% static 'portfolio/css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/> -->
     <!-- Compiled and minified CSS -->
@@ -12,8 +12,31 @@
   <link href="{% static 'portfolio/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <meta property="og:title" content="{{ post.post_title }}" />
+  <meta property="og:description" content="{{ post.post_content|safe }}" />
+  <meta property="og:url" content="http://hassanabid.com/blog/{{ post.id }}" />
+  <meta property="og:image" content="http://hassanabid.com/{{ post.post_photo.url }}" />
 </head>
 <body>
+{% block js %}
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '722253317920977',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+{% endblock js %}
   <nav class="green" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">{{ post.post_title}}</a>
       <ul class="right hide-on-med-and-down">
@@ -37,7 +60,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 m6 l6">
+        <div class="col s12">
         {% if post.post_category %}
           <a class="waves-effect waves-light btn pink accent-2"><i 
           class="material-icons left"></i>{{ post.post_category}}</a>
@@ -53,7 +76,7 @@
        {% if post.post_photo %}
       <div class="section">
         <div class="row">
-          <div class="col s12 m6 l6">
+          <div class="col s12">
             <img src="{{ post.post_photo.url }}" class="responsive-img">
           </div>
         </div>
@@ -67,8 +90,10 @@
       <i class="large material-icons">share</i>
     </a>
     <ul>
-      <li><a class="btn-floating blue darken-1"><i class="fa  fa-linkedin  fa-2x" style="color:#fff;"></i></a></li>
-      <li><a class="btn-floating light-blue darken-4"><i class="fa  fa-facebook  fa-2x"></i></a></li>
+      <li><a class="btn-floating blue darken-1" 
+      href="https://www.linkedin.com/shareArticle?mini=true&url=http://hassanabid.com/blog/{{post.id}}&title={{ post.post_title|urlencode }}&summary={{ post.post_content|urlencode }}&source=Hassan%20Abid"
+      ><i class="fa  fa-linkedin  fa-2x" style="color:#fff;"></i></a></li>
+      <li><a class="btn-floating light-blue darken-4" href="" onclick="fbshare()"><i class="fa  fa-facebook  fa-2x"></i></a></li>
       <li><a class="btn-floating light-blue accent-3"><i class="fa  fa-twitter  fa-2x"></i></a></li>
       <li><a class="btn-floating red darken-2"><i class="fa fa-google-plus fa-2x"></i></a></li>
     </ul>
@@ -113,6 +138,17 @@
     </div>
   </footer>
 
+<script>
+    function fbshare(){
+        FB.ui({
+          method: 'share',
+          href: 'http://hassanabidpk.com/blog/{{ post.id }}',
+          picture: 'http://hassanabidpk.com{{ post.post_photo.url }}',
+          caption: '{{ post.post_title }}',
+          description: '{{ post.post_content|safe }}'
+        }, function(response){});
+    }
+</script>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
