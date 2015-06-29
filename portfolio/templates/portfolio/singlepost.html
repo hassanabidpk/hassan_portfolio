@@ -18,6 +18,7 @@
   <meta property="og:image" content="http://hassanabid.com/{{ post.post_photo.url }}" />
 </head>
 <body>
+<div id="fb-root"></div>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -104,7 +105,7 @@
       href="https://www.linkedin.com/shareArticle?mini=true&url=http://hassanabid.com/blog/{{post.id}}&title={{ post.post_title|urlencode }}&summary={{ post.post_content|urlencode }}&source=Hassan%20Abid"
       ><i class="fa  fa-linkedin  fa-2x" style="color:#fff;"></i></a></li>
       <li><a class="btn-floating light-blue darken-4" href="" onclick="fbshare()"><i class="fa  fa-facebook  fa-2x"></i></a></li>
-      <li><a class="btn-floating light-blue accent-3"><i class="fa  fa-twitter  fa-2x"></i></a></li>
+      <li><a class="btn-floating light-blue accent-3" href="https://twitter.com/intent/tweet?text={{post.post_title|urlencode}}&url={{ 'http://hassanabid.com/blog/'|urlencode:''}}{{ post.id|urlencode:''}}&via=hassanabidpk"><i class="fa  fa-twitter  fa-2x"></i></a></li>
       <li><a class="btn-floating red darken-2"><i class="fa fa-google-plus fa-2x"></i></a></li>
     </ul>
   </div>
@@ -152,10 +153,9 @@
     function fbshare(){
         FB.ui({
           method: 'share',
-          href: 'http://hassanabidpk.com/blog/{{ post.id }}',
-          picture: 'http://hassanabidpk.com{{ post.post_photo.url }}',
+          href: 'http://hassanabid.com/blog/{{ post.id }}',
+          picture: 'http://hassanabid.com{{ post.post_photo.url }}',
           caption: '{{ post.post_title }}',
-          description: '{{ post.post_content|safe }}'
         }, function(response){});
     }
 </script>
