@@ -49,9 +49,9 @@
 </script>
 {% endblock js %}
   <nav class="green" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">{{ post.post_title}}</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="/blog/latest" class="brand-logo">Blog</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/blog/latest">Blog</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">News</a></li>
       </ul>
 
@@ -67,7 +67,9 @@
       <div class="section">
         <div class="row">
           <div class="col s12 m6 l6 offset-m3 offset-l3"></div>
-            <h5>{{ post.post_content|safe}}</h5>
+          <h3>{{ post.post_title }}</h3>
+          <div class="divider"></div>
+          <h6>{{ post.post_content|safe}}</h6>
         </div>
       </div>
       <div class="row">
@@ -122,7 +124,7 @@
         <div class="col l3 s12">
           <h5 class="white-text">Links</h5>
           <ul>
-            <li><a class="white-text" href="/blog/latest/">Blog</a></li>
+            <li><a class="white-text" href="/blog/latest">Blog</a></li>
             <li><a class="white-text" href="#!">MOOC Circle</a></li>
             <li><a class="white-text" href="#!">Seoul Mate</a></li>
             <li><a class="white-text" href="#!">Linkedin</a></li>
