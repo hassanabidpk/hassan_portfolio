@@ -1,6 +1,6 @@
+
 *.pyc
-portfolio/*.pyc
+*.DS_Store
 hassan_portfolio/settings.py
-portfolio/migrations/*.pvc
 posts/*
-portfolio/admin.pyc
+
