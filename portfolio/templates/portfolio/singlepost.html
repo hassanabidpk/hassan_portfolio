@@ -48,7 +48,7 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 {% endblock js %}
-  <nav class="green" role="navigation">
+  <nav class="green darken-2" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="/blog/latest" class="brand-logo">Blog</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
@@ -63,13 +63,21 @@
     </div>
   </nav>
   <!-- <div class="parallax-container" id="index-banner"> -->
-    <div class="container">
-      <div class="section">
-        <div class="row">
-          <div class="col s12 m6 l6 offset-m3 offset-l3"></div>
+      <div class="section green">
+        <div class="row center">
+          <div class="col s12 m8 l8 offset-m2 offset-l2">
           <h3>{{ post.post_title }}</h3>
+          <p class="pink-text accent-2">{{ post.post_published|date}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="section">
           <div class="divider"></div>
+          <div class="row">
+          <div class="col s12 m12 l12">
           <h6 style="line-height: 140%;">{{ post.post_content|safe}}</h6>
+          </div>
         </div>
       </div>
       <div class="row">
