@@ -82,12 +82,12 @@
       <div class="row">
         <div class="col s12">
         {% if post.post_category %}
-          <a class="waves-effect waves-light btn pink accent-2"><i 
+          <a class="waves-effect waves-light btn green darken-2"><i 
           class="material-icons left"></i>{{ post.post_category}}</a>
          {% endif %}
          &nbsp;&nbsp;&nbsp;
-        {% if post.post_category %}
-          <a class="waves-effect waves-light btn pink accent-3"><i 
+        {% if post.post_tags %}
+          <a class="waves-effect waves-light btn green darken-3"><i 
           class="material-icons left"></i>{{ post.post_tags }}</a>
          {% endif %}
         </div>
@@ -96,8 +96,8 @@
        {% if post.post_photo %}
       <div class="section">
         <div class="row">
-          <div class="col s12">
-            <img src="{{ post.post_photo.url }}" class="responsive-img">
+          <div class="col s12 m8 l8 offset-m2 offset-l2">
+            <img src="{{ post.post_photo.url }}" class="responsive-img materialboxed">
           </div>
         </div>
       </div>
