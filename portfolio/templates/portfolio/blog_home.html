@@ -22,15 +22,15 @@
 </head>
 <body>
   <nav class="deep-purple" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Blog</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="blog/" class="brand-logo">Blog</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="/">Home</a></li>
-        <li><a href="#">News</a></li>
+        <li><a href="#" class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Coming soon" >Hacks</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="/">Home</a></li>
-        <li><a href="#">News</a></li>
+        <li><a href="#" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Coming soon" >Hack</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </div>
@@ -65,7 +65,7 @@
               <img src="{{ post.post_photo.url }}">
             </div>
             <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4" style="font-size: 21px;">{{ post.post_title}}</span>
+            <span class="card-title activator truncate grey-text text-darken-4" style="font-size: 21px;">{{ post.post_title}}</span>
             <p><a href="/blog/{{ post.id }}">Read more</a></p>
             </div>
             <div class="card-action">
