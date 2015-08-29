@@ -57,7 +57,7 @@ body .demo-blog {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  min-height: 360px;
+  min-height: 410px;
 }
 .demo-blog .mdl-card__title {
   padding: 16px;
@@ -69,7 +69,6 @@ body .demo-blog {
 .demo-blog .mdl-card__media {
   box-sizing: border-box;
   background-size: cover;
-  padding: 24px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
