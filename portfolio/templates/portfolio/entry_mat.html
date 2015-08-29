@@ -21,7 +21,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information, open education and learning through teacher.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ post.post_title }}</title>
 
@@ -32,7 +32,7 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <meta name="apple-mobile-web-app-title" content="Hassan Abid">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -40,15 +40,14 @@
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
+    
+    <link rel="canonical" href="http://www.hassanabid.com/blog/{{ post.id }}">
+    
 
  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.deep_purple-cyan.min.css" /> 
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" /> 
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'portfolio/css/spacing.css' %}">
     <style>
     #view-source {
       position: fixed;
@@ -95,14 +94,14 @@
     <div class="demo-blog demo-blog--blogpost mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-back">
-          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/blog/">
+          <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/blog/latest">
             <i class="material-icons">arrow_back</i>
           </a>
         </div>
         <div class="demo-blog__posts mdl-grid">
           <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
             <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ post.post_photo.url }})">
-              <h3>{{ post.post_title }}/h3>
+              <h3>{{ post.post_title }}</h3>
             </div>
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
               <div>
@@ -140,12 +139,11 @@
         </div>
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__blogger"></button>
-            <button class="mdl-mini-footer--social-btn social-btn social-btn__gplus"></button>
+            <button onclick="location.href='https://twitter.com/hassanabidpk';" class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button>
+            <button onclick="location.href='https://plus.google.com/+HassanAbid/posts';" class="mdl-mini-footer--social-btn social-btn social-btn__gplus"></button>
           </div>
           <div class="mdl-mini-footer--right-section">
-            <button class="mdl-mini-footer--social-btn social-btn__share"><i class="material-icons">share</i></button>
+            <!-- <button class="mdl-mini-footer--social-btn social-btn__share"><i class="material-icons">share</i></button> -->
           </div>
         </footer>
       </main>

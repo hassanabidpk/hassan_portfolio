@@ -20,9 +20,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information, open education and learning through teacher.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Design Lite</title>
+    <title>Hassan Abid - Blog</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -31,7 +31,7 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <meta name="apple-mobile-web-app-title" content="Hassan Abid">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -45,7 +45,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.deep_purple-cyan.min.css" /> 
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" /> 
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
     <style>
     #view-source {
@@ -97,8 +97,7 @@
         {% for post in blog_posts %}
           {% if forloop.first %}
           <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
-            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ post.post_photo.url }})">
-              <!-- <img src=""> -->
+            <div class="mdl-card__media" style="background-image: url({{ post.post_photo.url }})">
 
               <h3 style="color: #000000;"><a href="/blog/{{ post.id }}">{{ post.post_title}}</a></h3>
             </div>
@@ -132,11 +131,8 @@
           </div>
           {% else %}
           <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__title">
+            <div class="mdl-card__media  mdl-color-text--white" style="background-image: url({{ post.post_photo.url }})">
               <h2 class="mdl-card__title-text">{{ post.post_title }}</h2>
-            </div>
-            <div class="mdl-card__media">
-              <img src="{{ post.post_photo.url }}" width="880" height="200" border="0" alt="" style="padding:20px;">
              </div>
             <div class="mdl-card__supporting-text">
              {{ post.post_content|truncatechars:100 }}

@@ -29,6 +29,7 @@ class Views(models.Model):
 		return "number of views : " + str(self.views)
 
 
+
 class Blog(models.Model):
 	post_author = models.CharField(max_length=250)
 	post_name = models.CharField(max_length=400)
@@ -51,7 +52,6 @@ class Blog(models.Model):
 			self.post_published = datetime.datetime.now()
 		self.post_modified = datetime.datetime.now()
 		return super(Blog,self).save()
-
 
 class News(models.Model):
 	
