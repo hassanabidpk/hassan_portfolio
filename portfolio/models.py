@@ -25,6 +25,17 @@ class Blog(models.Model):
 		self.post_modified = datetime.datetime.now()
 		return super(Blog,self).save()
 
+	def next(self):
+		try:
+			return Blog.objects.get(pk=self.pk+1)
+		except:
+			return None
+	def previous(self):
+		try :
+			return Blog.objects.get(pk=self.pk-1)
+		except:
+			return None
+
 class News(models.Model):
 	
 	news_author = models.CharField(max_length=250)
