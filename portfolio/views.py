@@ -35,7 +35,7 @@ def blog(request):
 	# post = get_object_or_404(Blog,pk=post_id)
 	blog_posts = Blog.objects.order_by('-post_published')
 	context = {'blog_posts': blog_posts}
-	return render(request, 'portfolio/blog_home.html', context)
+	return render(request, 'portfolio/blog_home_mat.html', context)
 
 def latest(request):
 	# post = get_object_or_404(Blog,pk=post_id)
@@ -45,7 +45,7 @@ def latest(request):
 
 def post(request,post_id):
 	post = get_object_or_404(Blog,pk=post_id)
-	return render(request, 'portfolio/singlepost.html', {'post': post})
+	return render(request, 'portfolio/entry_mat.html', {'post': post})
 
 
 def contact(request):
