@@ -3,7 +3,7 @@ from django.http import HttpResponse,Http404
 from django.template import RequestContext, loader
 
 
-from .models import Resume, Blog, News
+from .models import Blog, News
 
 def index(request):
 	context = ''
