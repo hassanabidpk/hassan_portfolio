@@ -8,8 +8,8 @@ class Blog(models.Model):
 	post_title = models.CharField(max_length=400)
 	post_photo = models.ImageField(upload_to='posts',blank=True)
 	post_content = models.TextField()
-	post_modified =  models.DateTimeField('date modified',default=datetime.datetime.now())
-	post_published =  models.DateTimeField('date published',default=datetime.datetime.now())
+	post_modified =  models.DateTimeField('date modified',auto_now=True)
+	post_published =  models.DateTimeField('date published',auto_now_add=True)
 	post_type = models.CharField(max_length=200)
 	comment_count = models.IntegerField(default=0)
 	post_category = models.CharField(max_length=200, default="programming")
@@ -21,8 +21,7 @@ class Blog(models.Model):
 
 	def save(self):
 		if not self.id:
-			self.post_published = datetime.datetime.now()
-		self.post_modified = datetime.datetime.now()
+			pass 
 		return super(Blog,self).save()
 
 	def next(self):
