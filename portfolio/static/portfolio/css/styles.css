@@ -561,3 +561,12 @@ body .demo-blog {
   .demo-card-wide > .mdl-card__menu {
     color: #fff;
   }
+
+  @media (max-width: 414px) {
+
+.demo-blog--blogpost .meta + .mdl-card__supporting-text p {
+  max-width: 300px;
+
+}
+
+  }
