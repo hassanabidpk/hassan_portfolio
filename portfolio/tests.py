@@ -21,7 +21,7 @@ class PortfolioTestCase(TestCase):
         project2.skills.add(skill2)
 
         # blog
-        post1 = Blog.objects.create(post_title="apple",post_content="mango",writer=u)
+        post1 = Blog.objects.create(post_title="apple",post_content="mango")
         post1.category.add(cat1)
         post1.category.add(cat2)
 

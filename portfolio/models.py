@@ -40,14 +40,15 @@ class Blog(models.Model):
 	post_tags = models.CharField(max_length=200,default="code")
 	post_code = models.TextField(default="")
 	category = models.ManyToManyField(Category)
-	writer = models.ForeignKey(User,limit_choices_to={'is_staff': True})
+
+	class Meta:
+		verbose_name_plural = "Posts"
 
 	def __str__(self):
 		return self.post_title
 
 	def save(self,*args, **kwargs):
 		if not self.id:
-			self.post_author = self.writer.first_name + self.writer.last_name 
 			self.post_name = self.post_title
 		return super(Blog,self).save(*args, **kwargs)
 
@@ -115,6 +116,8 @@ class News(models.Model):
 	category = models.ManyToManyField(Category)
 	slug = models.SlugField(max_length=60, unique=True)
 
+	class Meta:
+		verbose_name_plural = "News"
 	def __str__(self):
 		return news_title
 
@@ -122,7 +125,7 @@ class News(models.Model):
 		if not self.id:
 			self.slug = slugify(self.news_title)
 		return super(News,self).save(*args, **kwargs)
-
+    
 
 
 

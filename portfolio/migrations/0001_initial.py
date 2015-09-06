@@ -98,9 +98,4 @@ class Migration(migrations.Migration):
             name='category',
             field=models.ManyToManyField(to='portfolio.Category'),
         ),
-        migrations.AddField(
-            model_name='blog',
-            name='writer',
-            field=models.ForeignKey(to=settings.AUTH_USER_MODEL),
-        ),
     ]
