@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ors14sis+^f=zmhag1p9d!nzw_d8h=ghluxp^4gldw(q(m%irs'
+SECRET_KEY = 'helloWorld!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'portfolio',
+    'hacks'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -68,17 +70,6 @@ TEMPLATES = [
             ],
         },
     },
-    # {
-    #     'BACKEND': 'django.template.backends.jinja2.Jinja2',
-    #     'NAME': 'jinja2', 
-    #     'DIRS': [],
-    #     'APP_DIRS': True,
-    #     'OPTIONS': {
-    #         'environment' : 'jinja2_env.environment',
-    #         'autoescape': True,
-
-    #     },
-    # },
 ]
 
 WSGI_APPLICATION = 'hassan_portfolio.wsgi.application'
@@ -119,23 +110,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_ROOT = '/Users/hassanabid/Documents/hassan/Django_flask/django_hassan_web/hassan_portfolio/'
 MEDIA_URL = '/media/'
-# Heroku settings
-# import dj_database_url
-# DATABASES['default'] =  dj_database_url.config()
-
-# # Honor the 'X-Forwarded-Proto' header for request.is_secure()
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# # Allow all host headers
-# ALLOWED_HOSTS = ['*']
-
-# # Static asset configuration
-# # import os
-# # BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-# STATIC_ROOT = 'staticfiles'
-# # STATIC_URL = '/static/'
-
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
 

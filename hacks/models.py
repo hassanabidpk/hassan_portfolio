@@ -1,28 +1,40 @@
-import datetime
-
 from django.db import models
+from django.contrib.auth.models import User
+import datetime
 from django.utils import timezone
-
-
-
-
-class Hack(models.Model):
-	hack_title = models.CharField(max_length=400)
-	hack_description = models.TextField()
-	hack_link = models.URLField()
-	hack_photo = models.ImageField(upload_to='posts/hacks',blank=True)
-	hack_code  = models.TextField()
-
-	def __str__(self):
-		return hack_title
+from django.template.defaultfilters import slugify
 
 class HackCat(models.Model):
-	hack = models.ForeignKey(Hack)
-	cat_title = models.CharField(max_length=250, default ="programming")
-	cat_pos = models.IntegerField(default=0)
-	cat_description  = models.CharField(max_length=400)
+    title = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=60, unique=True)
+    description = models.TextField()
 
-	def __str__(self):
-		return self.cat_title
+    class Meta:
+        verbose_name_plural = "Categories"
 
+    def __str__(self):
+        return self.title
 
+    def get_absolute_url(self):
+        return "/hack_category/%s/" % self.slug
+
+class Hack(models.Model):
+    title  = models.CharField(max_length=200)
+    short_description = models.CharField(max_length=400)
+    long_description =  models.TextField()
+    github_link = models.URLField(max_length=250, blank=True)
+    ppt_link = models.URLField(max_length=250, blank=True)
+    slug = models.SlugField(max_length=100, unique=True)
+    cover_photo =  models.ImageField(upload_to='posts/hacks',blank=False)
+    category  = models.ManyToManyField(HackCat)
+    writer = models.ForeignKey(User)
+    updatedAt =  models.DateTimeField(auto_now=True)
+    createdAt =  models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    def save(self, *args, **kwargs):
+        if not self.id:
+            self.slug = slugify(self.title)
+        return super(Hack,self).save(*args, **kwargs)

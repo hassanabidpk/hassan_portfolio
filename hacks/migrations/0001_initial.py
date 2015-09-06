@@ -2,11 +2,13 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
+from django.conf import settings
 
 
 class Migration(migrations.Migration):
 
     dependencies = [
+        migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
@@ -14,21 +16,37 @@ class Migration(migrations.Migration):
             name='Hack',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('hack_title', models.CharField(max_length=400)),
-                ('hack_description', models.TextField()),
-                ('hack_link', models.URLField()),
-                ('hack_photo', models.ImageField(upload_to=b'posts/hacks', blank=True)),
-                ('hack_code', models.TextField()),
+                ('title', models.CharField(max_length=200)),
+                ('short_description', models.CharField(max_length=400)),
+                ('long_description', models.TextField()),
+                ('github_link', models.URLField(max_length=250, blank=True)),
+                ('ppt_link', models.URLField(max_length=250, blank=True)),
+                ('slug', models.SlugField(unique=True, max_length=100)),
+                ('cover_photo', models.ImageField(upload_to=b'posts/hacks')),
+                ('updatedAt', models.DateTimeField(auto_now=True)),
+                ('createdAt', models.DateTimeField(auto_now_add=True)),
             ],
         ),
         migrations.CreateModel(
             name='HackCat',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('cat_title', models.CharField(default=b'programming', max_length=250)),
-                ('cat_pos', models.IntegerField(default=0)),
-                ('cat_description', models.CharField(max_length=400)),
-                ('hack', models.ForeignKey(to='hacks.Hack')),
+                ('title', models.CharField(max_length=200)),
+                ('slug', models.SlugField(unique=True, max_length=60)),
+                ('description', models.TextField()),
             ],
+            options={
+                'verbose_name_plural': 'Categories',
+            },
+        ),
+        migrations.AddField(
+            model_name='hack',
+            name='category',
+            field=models.ManyToManyField(to='hacks.HackCat'),
+        ),
+        migrations.AddField(
+            model_name='hack',
+            name='writer',
+            field=models.ForeignKey(to=settings.AUTH_USER_MODEL),
         ),
     ]
