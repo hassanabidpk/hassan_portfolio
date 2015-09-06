@@ -20,6 +20,11 @@ class Category(models.Model):
     def get_absolute_url(self):
         return "/categories/%s/" % self.slug
 
+    def save(self, *args, **kwargs):
+		if not self.id:
+			self.slug = slugify(self.title)
+		return super(Category,self).save(*args, **kwargs)
+
 
 class Blog(models.Model):
 	post_author = models.CharField(max_length=250)
@@ -40,10 +45,11 @@ class Blog(models.Model):
 	def __str__(self):
 		return self.post_title
 
-	def save(self):
+	def save(self,*args, **kwargs):
 		if not self.id:
-			pass 
-		return super(Blog,self).save()
+			self.post_author = self.writer.first_name + self.writer.last_name 
+			self.post_name = self.post_title
+		return super(Blog,self).save(*args, **kwargs)
 
 	def next(self):
 		try:
