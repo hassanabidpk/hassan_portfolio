@@ -4,6 +4,11 @@ from django.contrib import admin
 from .models import Blog,News,Category,Skill,Project
 
 
+class CategoryInline(admin.TabularInline):
+	model = Blog.category.through
+	extra = 3
+
+
 class BlogAdmin(admin.ModelAdmin):
 	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content","post_photo","post_category","post_tags","category"]}),
 	]
@@ -12,6 +17,7 @@ class BlogAdmin(admin.ModelAdmin):
 	list_editable = ('post_title', 'post_content','post_photo','post_category','post_tags')
 	list_filter = ['post_published']
 	search_fields = ['post_title', 'post_content']
+	# inlines = (CategoryInline,)
 
 class ProjectAdmin(admin.ModelAdmin):
 
@@ -22,7 +28,11 @@ class NewsAdmin(admin.ModelAdmin):
 	exclude = ('slug',)
 
 class SkillAdmin(admin.ModelAdmin):
-
+	fieldsets = [(None, {'fields': ['title','related_projects',"logo","term"]}),
+	]
+	list_display = ('title','related_projects','logo','term')
+	list_editable = ('title','related_projects','logo','term')
+	list_filter = ['title']
 	exclude = ('slug',)
 
 class CategoryAdmin(admin.ModelAdmin):

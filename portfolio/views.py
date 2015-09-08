@@ -3,11 +3,13 @@ from django.http import HttpResponse,Http404
 from django.template import RequestContext, loader
 
 
-from .models import Blog, News
+from .models import Blog, News, Skill,Project
 
 def index(request):
-	context = ''
-	return render(request,'portfolio/index.html', context)
+	skills = Skill.objects.order_by('title')
+	projects = Project.objects.order_by('createdAt')
+	context = {"skills": skills,"projects": projects}
+	return render(request,'portfolio/index_mat.html', context)
 
 def blog(request):
 	blog_posts = Blog.objects.order_by('-post_published')

@@ -1,0 +1,266 @@
+{% load staticfiles %}
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hassan Abid</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hassan Abid">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    
+    <link rel="canonical" href="http://www.hassanabid.com/">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" /> 
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles_mat.css' %}">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__header-row">
+          <h3>Hassan Abid</h3>
+          <h5>&nbsp;&nbsp;&nbsp;Engineer, Hobbyist</h5>
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+          <a href="#overview" class="mdl-layout__tab is-active">RESUME</a>
+          <a href="#features" class="mdl-layout__tab">Projects</a>
+          <a href="#opensource" class="mdl-layout__tab">Open Source</a>
+          <a href="/blog/latest/" class="mdl-navigation__link" style="line-height: 64px;font-size: 14px; color:rgba(66, 66, 66, 0.6);">BLOG</a>
+          <a href="https://www.dropbox.com/s/z80sw6enezwssj2/Hassan_Resume.pdf?dl=0" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+            <i class="material-icons">file_download</i>
+          </a>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Hassan Abid</span>
+        <nav class="mdl-navigation">
+          <a href="#overview" class="mdl-navigation__link">RESUME</a>
+          <a href="#features" class="mdl-navigation__link">Projects</a>
+          <a href="#opensource" class="mdl-navigation__link">Open Source</a>
+          <a href="/blog/latest/" class="mdl-navigation__link">Blog</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+            <img src="{% static 'portfolio/images/hassan_profile.jpg' %}" >
+              <!-- <i class="material-icons">play_circle_filled</i> -->
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>About me</h4>
+               Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information, open education and learning through teacher.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button"></a>
+              </div>
+            </div>
+          </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h4 class="mdl-cell mdl-cell--12-col">Skills</h4>
+                {% if skills %}
+                 {% for skill in skills %}
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle"><img src="{{ skill.logo.url }}" width="64", height="64"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>{{ skill.title }}</h5>
+                  {{ skill.related_projects|safe }}
+                </div>
+                {% endfor %}
+                {% else %}
+                  <h4>Skills not posted yet</h4>
+                {% endif %}
+              </div>
+<!--               <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Read our features</a>
+              </div> -->
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
+              <li class="mdl-menu__item"><a href="https://github.com/hassanabidpk">Github</a></li>
+            </ul>
+          </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text">
+                <h4>Summary</h4>
+                Meticulous Android, iOS and Web Application developer who undertakes assignments, meet deadlines, and delivers quality work. Possesses practical and up-to-date knowledge about Android OS and APIs. Applies analytical skills in solving day-to-day problems and challenges. Operates with eagerness and strong sense of urgency. Expertise in Android and iOS UI development along side with knowledge about OpenGL. Possesses ability to make a full-fledge smartphone and web app. Fluent in English, intermediate level of Korean.  <br>
+                To further enhance my skills, I have completed three online courses including one from MIT (Python), others are Developing Scalable Apps,iOS App Development with Swift, and Web Development on Udacity. Moreover, I am also enrolled in Android Developers Nanodegree! <br>
+
+                I have strong experience building and maintaining Social and Cloud Services APIs, SDKs, and tools. I developed Social and Cloud Services SDK for internal use in company. Supported services are Facebook, Dropbox, Google+, Google Drive and YouTube.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="https://kr.linkedin.com/pub/hassan-abid/12/700/66b" class="mdl-button">LinkedIn Profile</a>
+              </div>
+            </div>
+          </section>
+          <section class="section--footer mdl-color--white mdl-grid">
+            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+              <div class="section__circle-container__circle mdl-color--accent section__circle--big"><img src="{% static 'portfolio/images/nanodegreee.png' %}"></div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Android Developers Nanodegree</h5>
+              Google has partnered with Udacity to offer high quality <a href="https://www.udacity.com/course/android-developer-nanodegree--nd801">Android Development courses</a> - free of cost. I am entrolled in its Nanodegree program which is expected to conclude in December,2015
+            </div>
+            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+              <div class="section__circle-container__circle mdl-color--orange section__circle--big"><img src="https://djangogirls.org/static/img/logo.png" width="150" height="100"></div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+              <h5>Django Girls Seoul Organizer &amp; Coach</h5>
+              It is a non-profit organization and events are organized by volunteers in different places of the world. We initiated Django Girls Seoul chapter and planned event for October 2-3 , 2015 -> <a href="https://djangogirls.org/seoul">link</a>
+            </div>
+          </section>
+        </div>
+        <div class="mdl-layout__tab-panel" id="features">
+          <section class="section--center mdl-grid">
+              {% if projects %}
+              {% for project in projects %}
+              <div class="mdl-cell mdl-cell--6-col mdl-cell--6-col-tablet mdl-cell--12-col-phone mdl-card mdl-shadow--3dp">
+                <div class="mdl-card__title">
+                   <h4 class="mdl-card__title-text">{{ project.title }}</h4>
+                </div>
+                <div class="mdl-card__supporting-text" style="margin-top: -20px;">
+                  <span class="mdl-typography--font-light mdl-typography--subhead">{{ project.description }}</span>
+                </div>
+                <div class="mdl-card__actions">
+                  {% if project.android %}
+                   <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{ project.android }}">
+                     <i class="material-icons">android</i> Android
+                   </a>
+                   {% endif %}
+                   {% if project.web %}
+                   <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{ project.web }}">
+                     <i class="material-icons">web</i> Web
+                   </a>
+                   {% endif %}
+                    {% if project.ios %}
+                   <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="{{ project.ios }}">
+                     <i class="material-icons">phone_iphone</i> iOS
+                   </a>
+                   {% endif %}
+                </div>
+              </div>
+              {% endfor %}
+            {% else %}
+            <h2>No projects available</h2>
+            {% endif %}
+          </section>
+        </div>
+        <div class="mdl-layout__tab-panel" id="opensource">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <h3 class="mdl-cell mdl-cell--12-col">Open Source</h3>
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle"><img src="{% static 'portfolio/images/seoulmate.png' %}" width="100" height="100"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h4>Seoul Mate</h4>
+                  Seoul Mate lets you post your question, find friends from your university, and get updates about jobs, internships, scholarships and more. Seoul Mate is the perfect way to keep up with your friends in South Korea. It also provides you with campus maps so that you don't get lost on first day at your university. I am planning to open source its web and mobile apps in near future!
+                </div>
+              </div>
+              <div class="mdl-card__actions">
+                <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://github.com/SeoulMate">
+                <i class="material-icons">link</i> Github
+                </a>
+              </div>
+            </div>
+          </section>
+           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle"><img src="https://www.codeforeveryone.co/static/landingsite/images/logo_jin_1.png" width="110" height="50"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h4>Code For Everyone</h4>
+                  Code for Everyone is a programming community whose members vary in programming knowledge and ability from absolute beginners to professional programmers, but all share a common interest: code. We are based in Seoul, South Korea but our community has no borders. 
+                </div>
+              </div>
+              <div class="mdl-card__actions">
+                   <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://github.com/CodeforeveryoneSeoul">
+                     <i class="material-icons">link</i> Github
+                   </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <footer class="mdl-mini-footer">
+          <div class="mdl-mini-footer__left-section">
+            <div class="mdl-logo">
+              Made with Django &amp; Material Design Light
+            </div>
+            <ul class="mdl-mini-footer__link-list">
+              <li><a href="/blog/latest/">Blog</a></li>
+              <li><a href="https://twitter.com/hassanabidpk">Twitter</a></li>
+              <li><a href="https://github.com/hassanabidpk">Github</a></li>
+            </ul>
+          </div>
+<!--           <div class="mdl-mini-footer__right-section">
+            <button class="mdl-mini-footer__social-btn" style="background-image: url('https://www.gstatic.com/images/icons/material/system/2x/post_twitter_white_24dp.png');"></button>
+            <button class="mdl-mini-footer__social-btn"></button>
+            <button class="mdl-mini-footer__social-btn"></button>
+          </div> -->
+        </footer>
+      </main>
+    </div>
+    <a href="https://github.com/hassanabidpk/hassan_portfolio" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+  </body>
+</html>
