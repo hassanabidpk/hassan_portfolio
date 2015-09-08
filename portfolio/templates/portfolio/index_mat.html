@@ -65,13 +65,13 @@
       <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
-        <div class="mdl-layout__header-row">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
           <h3>Hassan Abid</h3>
           <h5>&nbsp;&nbsp;&nbsp;Engineer, Hobbyist</h5>
         </div>
         <div class="mdl-layout--large-screen-only mdl-layout__header-row">
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
           <a href="#overview" class="mdl-layout__tab is-active">RESUME</a>
           <a href="#features" class="mdl-layout__tab">Projects</a>
           <a href="#opensource" class="mdl-layout__tab">Open Source</a>
@@ -81,15 +81,6 @@
           </a>
         </div>
       </header>
-      <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Hassan Abid</span>
-        <nav class="mdl-navigation">
-          <a href="#overview" class="mdl-navigation__link">RESUME</a>
-          <a href="#features" class="mdl-navigation__link">Projects</a>
-          <a href="#opensource" class="mdl-navigation__link">Open Source</a>
-          <a href="/blog/latest/" class="mdl-navigation__link">Blog</a>
-        </nav>
-      </div>
       <main class="mdl-layout__content">
         <div class="mdl-layout__tab-panel is-active" id="overview">
           <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -152,7 +143,7 @@
           </section>
           <section class="section--footer mdl-color--white mdl-grid">
             <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--accent section__circle--big"><img src="{% static 'portfolio/images/nanodegreee.png' %}"></div>
+              <div class="section__circle-container__circle mdl-color--accent section__circle--big"><img class="bottom-image" src="{% static 'portfolio/images/nanodegreee.png' %}"></div>
             </div>
             <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
               <h5>Android Developers Nanodegree</h5>
