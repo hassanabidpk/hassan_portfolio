@@ -47,6 +47,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" /> 
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolio/css/styles_mat.css' %}">
+    <link rel="stylesheet" media="screen and (max-width: 414px)" href="{% static 'portfolio/css/styles_mat_medium.css' %}">
     <style>
     #view-source {
       position: fixed;
@@ -89,7 +91,19 @@
    }(document, 'script', 'facebook-jssdk'));
 </script>
 {% endblock js %}
-
+  <header class="mdl-layout__header ">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">Blog</span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation -->
+          <nav class="mdl-navigation">
+            <!-- <a class="mdl-navigation__link" href="/">Home</a> -->
+          </nav>
+        </div>
+      </header>
+  <main class="mdl-layout__content">
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
@@ -110,7 +124,7 @@
             </div>
           </div>
           <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white">add</i></button>
+            <button onclick="location.href='/';" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent"><i class="material-icons mdl-color-text--white">home</i></button>
             <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
               <img src="{% static 'portfolio/images/logo.png' %}">
               <!-- +1,337 -->
@@ -174,6 +188,7 @@
         {% else %}
         <h3>No posts are available.</h3>
         {% endif %}
+
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer--left-section">
             <button onclick="location.href='https://twitter.com/hassanabidpk';" class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button>
@@ -188,6 +203,7 @@
     </div>
  <!--    <a href="https://github.com/hassanabidpk/hassan_portfolio" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a> -->
    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+   </main>
   </body>
   <script>
     Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
