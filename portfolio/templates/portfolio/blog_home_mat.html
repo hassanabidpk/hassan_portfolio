@@ -110,9 +110,9 @@
         {% for post in blog_posts %}
           {% if forloop.first %}
           <button onclick="location.href='/';" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent" style="margin-bottom: 25px;"><i class="material-icons mdl-color-text--white">home</i></button>
-          <div class="mdl-card coffee-pic mdl-cell mdl-cell--8-col">
+          <div class="mdl-card coffee-pic mdl-cell mdl-cell--12-col">
             <div class="mdl-card__media" style="background-image: url({{ post.post_photo.url }})">
-              <h3 class="mdl-color-text--white"><a href="/blog/{{ post.id }}">{{ post.post_title}}</a></h3>
+              <h3 class="mdl-color-text--white"><a onclick="location.href='/blog/{{ post.id }}';">{{ post.post_title}}</a></h3>
             </div>
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
               <div class="minilogo"></div>
@@ -151,7 +151,7 @@
                <h2 class="mdl-card__title-text">{{ post.post_title }}</h2>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/{{ post.id }}">
+              <a onclick="location.href='/blog/{{ post.id }}';" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/{{ post.id }}">
                 Learn More
               </a>
             </div>
