@@ -20,7 +20,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="description" content="Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information and open education">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hassan Abid</title>
 
@@ -49,7 +49,14 @@
       <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" /> 
     <link rel="stylesheet" href="{% static 'portfolio/css/styles_mat.css' %}">
     <link rel="stylesheet" media="screen and (max-width: 414px)" href="{% static 'portfolio/css/styles_mat_medium.css' %}">
-
+ <!-- Fb Tags-->
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" /> 
+    <meta property="og:title" content="Hassan Abid" /> 
+    <meta property="article:author" content="https://www.facebook.com/hassanabidpk89" />
+    <meta property="og:description" content="Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information and open education" /> 
+    <meta property="og:image"content="{% static 'portfolio/images/hassan_gdgkorea.jpg' %}" />
+    <meta property="og:url" content="http://hassanabid.com" />
     <style>
     #view-source {
       position: fixed;
@@ -61,6 +68,7 @@
       z-index: 900;
     }
     </style>
+
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -93,10 +101,13 @@
             <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
               <div class="mdl-card__supporting-text">
                 <h4>About me</h4>
-               Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information, open education and learning through teacher.
+               Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information and open education.
               </div>
               <div class="mdl-card__actions">
-                <a href="#" class="mdl-button"></a>
+                <a href="https://twitter.com/hassanabidpk" class="mdl-button">Twitter</a>
+                <a href="https://github.com/hassanabidpk" class="mdl-button">Github</a>
+                <a href="https://kr.linkedin.com/pub/hassan-abid/12/700/66b" class="mdl-button">LinkedIn</a>
+             
               </div>
             </div>
           </section>
@@ -206,7 +217,7 @@
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <h3 class="mdl-cell mdl-cell--12-col">Open Source</h3>
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle"><img src="{% static 'portfolio/images/seoulmate.png' %}" width="100" height="100"></div>
+                  <div class="section__circle-container__circle"><img class="skill-logo"  src="{% static 'portfolio/images/seoulmate.png' %}" width="100" height="100"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h4>Seoul Mate</h4>
@@ -224,7 +235,7 @@
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle"><img src="https://www.codeforeveryone.co/static/landingsite/images/logo_jin_1.png" width="110" height="50"></div>
+                  <div class="section__circle-container__circle"><img src="https://www.codeforeveryone.co/static/landingsite/images/logo_jin_1.png" class="skill-logo"  width="110" height="50"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h4>Code For Everyone</h4>
