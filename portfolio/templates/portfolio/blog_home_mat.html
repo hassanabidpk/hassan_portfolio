@@ -73,23 +73,6 @@
 
 </script>
 {% block js %}
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '722253317920977',
-      xfbml      : true,
-      version    : 'v2.3'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 {% endblock js %}
   <header class="mdl-layout__header ">
         <div class="mdl-layout__header-row">
@@ -128,31 +111,15 @@
             <a href="/blog/{{ post.id }}"></a>
              </div>
             <div class="mdl-card__supporting-text">
-               <a onclick="location.href='/blog/{{ post.id }}';" href="/blog/{{ post.id }}"><h2 class="mdl-card__title-text" >{{ post.post_title }}</h2></a>
+               <h2 class="mdl-card__title-text">{{ post.post_title }}</h2>
             </div>
             <div class="mdl-card__actions mdl-card--border">
               <button onclick="location.href='/blog/{{ post.id }}';" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/blog/{{ post.id }}">
                 Learn More
               </button>
             </div>
-            <div class="mdl-card__menu">
-              <a onclick="fbshare{{ post.id }}()" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--colored">
-                <i class="material-icons">share</i>
-              </a>
-            </div>
           </div>
           {% endif %}
-
-          <script>
-              function fbshare{{ post.id }}(){
-                  FB.ui({
-                    method: 'share',
-                    href: 'http://hassanabid.com/blog/{{ post.id }}',
-                    picture: 'http://hassanabid.com{{ post.post_photo.url }}',
-                    caption: '{{ post.post_title }}',
-                  }, function(response){});
-              }
-          </script>
           {% endfor %}
           <nav class="demo-nav mdl-cell mdl-cell--12-col">
             <div class="section-spacer"></div>
@@ -183,18 +150,18 @@
    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
   </body>
   <script>
-    // Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-    //   var link = el.querySelector('a');
-    //   if(!link) {
-    //     return;
-    //   }
-    //   var target = link.getAttribute('href');
-    //   if(!target) {
-    //     return;
-    //   }
-    //   el.addEventListener('click', function() {
-    //     location.href = target;
-    //   });
-    // });
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+      var link = el.querySelector('a');
+      if(!link) {
+        return;
+      }
+      var target = link.getAttribute('href');
+      if(!target) {
+        return;
+      }
+      el.addEventListener('click', function() {
+        location.href = target;
+      });
+    });
   </script>
 </html>
