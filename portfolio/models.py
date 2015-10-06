@@ -1,4 +1,5 @@
 from django.db import models
+from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 import datetime
 from django.utils import timezone
@@ -39,7 +40,6 @@ class Blog(models.Model):
 	post_category = models.CharField(max_length=200, default="programming")
 	post_tags = models.CharField(max_length=200,default="code")
 	post_code = models.TextField(default="")
-	category = models.ManyToManyField(Category)
 
 	class Meta:
 		verbose_name_plural = "Posts"
@@ -54,12 +54,12 @@ class Blog(models.Model):
 
 	def next(self):
 		try:
-			return Blog.objects.get(pk=self.pk+1)
+			return get_object_or_404(Blog,pk=self.pk+1)
 		except:
 			return None
 	def previous(self):
 		try :
-			return Blog.objects.get(pk=self.pk-1)
+			return get_object_or_404(Blog,pk=self.pk-1)
 		except:
 			return None
 

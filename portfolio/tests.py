@@ -22,8 +22,6 @@ class PortfolioTestCase(TestCase):
 
         # blog
         post1 = Blog.objects.create(post_title="apple",post_content="mango")
-        post1.category.add(cat1)
-        post1.category.add(cat2)
 
 
     def test_project_has_title(self):
@@ -39,11 +37,11 @@ class PortfolioTestCase(TestCase):
 
     def test_blog_has_field(self):
     	post1 = Blog.objects.get(post_title="apple")
-    	cat1 = post1.category.all()[0]
+    	# cat1 = post1.category.all()[0]
 
     	self.assertEqual(post1.post_title, "apple")
     	self.assertEqual(post1.post_content,"mango")
-    	self.assertEqual(cat1.title,"test cat")
+    	# self.assertEqual(cat1.title,"test cat")
 
 
 

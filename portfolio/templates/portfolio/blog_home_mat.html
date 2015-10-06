@@ -94,7 +94,11 @@
           {% if forloop.first %}
           <button onclick="location.href='/';" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent" style="margin-bottom: 25px;"><i class="material-icons mdl-color-text--white">home</i></button>
           <div class="mdl-card coffee-pic mdl-cell mdl-cell--12-col">
+           {% if post.post_photo %}
             <div class="mdl-card__media" style="background-image: url({{ post.post_photo.url }})">
+            {% else %}
+            <div class="mdl-card__media">
+            {% endif %}
               <h3 class="mdl-color-text--white"><a onclick="location.href='/blog/{{ post.id }}';" href="/blog/{{ post.id }}">{{ post.post_title}}</a></h3>
             </div>
             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
@@ -107,7 +111,11 @@
           </div>
           {% else %}
           <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+          {% if post.post_photo %}
             <div class="mdl-card__media  mdl-color-text--white" style="background-image: url({{ post.post_photo.url }})">
+            {% else %}
+            <div class="mdl-card__media  mdl-color-text--white">
+            {% endif %}
             <a href="/blog/{{ post.id }}"></a>
              </div>
             <div class="mdl-card__supporting-text">

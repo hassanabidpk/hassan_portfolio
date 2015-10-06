@@ -100,7 +100,11 @@
         </div>
         <div class="demo-blog__posts mdl-grid">
           <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__media mdl-color-text--grey-50" style="background-image: url({{ post.post_photo.url }})">
+          {% if post.post_photo %}
+            <div class="mdl-card__media mdl-color-text--grey-50"  style="background-image: url({{ post.post_photo.url }})">
+            {% else %}
+            <div class="mdl-card__media mdl-color-text--grey-50">
+            {% endif %}
               <h3>{{ post.post_title }}</h3>
             </div>
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
@@ -160,7 +164,8 @@
         FB.ui({
           method: 'share',
           href: 'http://hassanabid.com/blog/{{ post.id }}',
-          picture: 'http://hassanabid.com{{ post.post_photo.url }}',
+          {% if post.post_photo %}
+          picture: 'http://hassanabid.com{{ post.post_photo.url }}', {% endif %}
           caption: '{{ post.post_title }}',
         }, function(response){});
     }

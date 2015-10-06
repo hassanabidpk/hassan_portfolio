@@ -4,13 +4,8 @@ from django.contrib import admin
 from .models import Blog,News,Category,Skill,Project
 
 
-class CategoryInline(admin.TabularInline):
-	model = Blog.category.through
-	extra = 3
-
-
 class BlogAdmin(admin.ModelAdmin):
-	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content","post_photo","post_category","post_tags","category"]}),
+	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content","post_photo","post_category","post_tags"]}),
 	]
 
 	list_display = ('post_author', 'post_title', 'post_content','post_photo','post_category','post_tags')
