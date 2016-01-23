@@ -1,18 +1,21 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Blog,News,Category,Skill,Project
+from .models import Post,News,Category,Skill,Project
 
+class CategoryInline(admin.TabularInline):
+	model = Post.category.through
+	extra = 1
 
-class BlogAdmin(admin.ModelAdmin):
-	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content","post_photo","post_category","post_tags"]}),
+class PostAdmin(admin.ModelAdmin):
+	fieldsets = [(None, {'fields': ['post_author','post_title',"post_content","post_photo"]}),
 	]
 
-	list_display = ('post_author', 'post_title', 'post_content','post_photo','post_category','post_tags')
-	list_editable = ('post_title', 'post_content','post_photo','post_category','post_tags')
+	list_display = ('post_author', 'post_title', 'post_content','post_photo')
+	list_editable = ('post_title', 'post_content','post_photo')
 	list_filter = ['post_published']
 	search_fields = ['post_title', 'post_content']
-	# inlines = (CategoryInline,)
+	inlines = (CategoryInline,)
 
 class ProjectAdmin(admin.ModelAdmin):
 
@@ -34,10 +37,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 	exclude = ('slug',)
 
-admin.site.register(Blog,BlogAdmin)
+admin.site.register(Post,PostAdmin)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Skill,SkillAdmin)
 admin.site.register(Project,ProjectAdmin)
-
-

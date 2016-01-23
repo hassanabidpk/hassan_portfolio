@@ -39,22 +39,22 @@
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    
+
     <link rel="canonical" href="http://www.hassanabid.com/">
-    
+
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" /> 
+      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" />
     <link rel="stylesheet" href="{% static 'portfolio/css/styles_mat.css' %}">
     <link rel="stylesheet" media="screen and (max-width: 414px)" href="{% static 'portfolio/css/styles_mat_medium.css' %}">
  <!-- Fb Tags-->
     <meta property="og:type" content="article" />
-    <meta property="og:locale" content="en_US" /> 
-    <meta property="og:title" content="Hassan Abid" /> 
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Hassan Abid" />
     <meta property="article:author" content="https://www.facebook.com/hassanabidpk89" />
-    <meta property="og:description" content="Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information and open education" /> 
+    <meta property="og:description" content="Hassan Abid, a Pakistan native, has been living in Korea for five years as an App and web developer. He has worked with many programming languages on many projects. In his free time he is an organizer of a programming study meetup that has been meeting regularly for a year and a half. He believes in open source information and open education" />
     <meta property="og:image"content="{% static 'portfolio/images/hassan_gdgkorea.jpg' %}" />
     <meta property="og:url" content="http://hassanabid.com" />
     <style>
@@ -87,6 +87,8 @@
           <a href="#overview" class="mdl-layout__tab is-active">RESUME</a>
           <a href="#features" class="mdl-layout__tab">Projects</a>
           <a href="#opensource" class="mdl-layout__tab">Open Source</a>
+          <a href="#mooc" class="mdl-layout__tab">MOOC</a>
+          <a href="#posts" class="mdl-layout__tab">Posts</a>
           <a href="/blog/latest/" class="mdl-navigation__link" style="line-height: 64px;font-size: 14px; color:rgba(66, 66, 66, 0.6);">BLOG</a>
           <a href="https://www.dropbox.com/s/z80sw6enezwssj2/Hassan_Resume.pdf?dl=0" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
             <i class="material-icons">file_download</i>
@@ -109,7 +111,7 @@
                 <a href="https://twitter.com/hassanabidpk" class="mdl-button">Twitter</a>
                 <a href="https://github.com/hassanabidpk" class="mdl-button">Github</a>
                 <a href="https://kr.linkedin.com/pub/hassan-abid/12/700/66b" class="mdl-button">LinkedIn</a>
-             
+
               </div>
             </div>
           </section>
@@ -241,7 +243,7 @@
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h4>Code For Everyone</h4>
-                  Code for Everyone is a programming community whose members vary in programming knowledge and ability from absolute beginners to professional programmers, but all share a common interest: code. We are based in Seoul, South Korea but our community has no borders. 
+                  Code for Everyone is a programming community whose members vary in programming knowledge and ability from absolute beginners to professional programmers, but all share a common interest: code. We are based in Seoul, South Korea but our community has no borders.
                 </div>
               </div>
               <div class="mdl-card__actions">
@@ -251,6 +253,34 @@
               </div>
             </div>
           </section>
+        </div>
+        <div class="mdl-layout__tab-panel" id="posts">
+           {% if blog_posts %}
+             {% for post in blog_posts %}
+              <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                    {% if forloop.first %}
+                    <h3 class="mdl-cell mdl-cell--12-col">Blog Posts</h3>
+                    {% endif %}
+                    <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                      <h4>{{ post.post_title}}</h4>
+                      <p>{{ post.post_content|truncatechars:340}}</p>
+                      <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="/blog/{{ post.id }}">
+                      Read More <i class="material-icons">keyboard_arrow_right</i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="mdl-card__actions">
+                    <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="javascript:void(0)" >  <i class="material-icons">date_range</i>
+                      {{ post.post_published|date }}</a>
+                  </div>
+                </div>
+              </section>
+          {% endfor %}
+          {% else %}
+          <h3>No posts are available.</h3>
+          {% endif %}
         </div>
         <footer class="mdl-mini-footer">
           <div class="mdl-mini-footer__left-section">
