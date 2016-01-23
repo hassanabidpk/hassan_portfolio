@@ -20,4 +20,6 @@ def blog(request):
 
 def post(request,post_id):
 	post = get_object_or_404(Post,pk=post_id)
-	return render(request, 'portfolio/entry_mat.html', {'post': post})
+	categories = post.category.all()
+	print(categories)
+	return render(request, 'portfolio/entry_mat.html', {'post': post,'categories':categories})

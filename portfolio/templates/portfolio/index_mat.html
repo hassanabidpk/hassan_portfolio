@@ -46,7 +46,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" />
+      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.cyan-deep_purple.min.css" />
     <link rel="stylesheet" href="{% static 'portfolio/css/styles_mat.css' %}">
     <link rel="stylesheet" media="screen and (max-width: 414px)" href="{% static 'portfolio/css/styles_mat_medium.css' %}">
  <!-- Fb Tags-->
@@ -89,7 +89,7 @@
           <a href="#opensource" class="mdl-layout__tab">Open Source</a>
           <a href="#mooc" class="mdl-layout__tab">MOOC</a>
           <a href="#posts" class="mdl-layout__tab">Posts</a>
-          <a href="/blog/latest/" class="mdl-navigation__link" style="line-height: 64px;font-size: 14px; color:rgba(66, 66, 66, 0.6);">BLOG</a>
+          <!-- <a href="/blog/latest/" class="mdl-navigation__link" style="line-height: 64px;font-size: 14px; color:rgba(66, 66, 66, 0.6);">BLOG</a> -->
           <a href="https://www.dropbox.com/s/z80sw6enezwssj2/Hassan_Resume.pdf?dl=0" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
             <i class="material-icons">file_download</i>
           </a>
@@ -239,7 +239,7 @@
             <div class="mdl-card mdl-cell mdl-cell--12-col">
               <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
                 <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle"><img src="https://www.codeforeveryone.co/static/landingsite/images/logo_jin_1.png" class="skill-logo"  width="110" height="50"></div>
+                  <div class="section__circle-container__circle"><img src="https://avatars3.githubusercontent.com/u/10337696?v=3&s=200" class="skill-logo" width="100"></div>
                 </div>
                 <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                   <h4>Code For Everyone</h4>
@@ -253,6 +253,24 @@
               </div>
             </div>
           </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+           <div class="mdl-card mdl-cell mdl-cell--12-col">
+             <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+               <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                 <div class="section__circle-container__circle"><img src="https://avatars3.githubusercontent.com/u/9149265?v=3&s=200" class="skill-logo" width="100"></div>
+               </div>
+               <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                 <h4>Global MOOC Campus</h4>
+                 Global MOOC Campus Website project started in April 2014. The purpose of this website is to curate courses from major MOOC platforms such as Coursra,edX, Udacity and Future Learn and let students or learners make study groups. There is also an option of translating course details to Korean language
+               </div>
+             </div>
+             <div class="mdl-card__actions">
+                  <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://github.com/globalmooccampus">
+                    <i class="material-icons">link</i> Github
+                  </a>
+             </div>
+           </div>
+         </section>
         </div>
         <div class="mdl-layout__tab-panel" id="posts">
            {% if blog_posts %}
@@ -302,6 +320,6 @@
       </main>
     </div>
     <a href="https://github.com/hassanabidpk/hassan_portfolio" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
   </body>
 </html>

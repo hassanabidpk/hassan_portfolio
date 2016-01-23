@@ -46,7 +46,7 @@
 
  <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.cyan-deep_purple.min.css" />
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.cyan-deep_purple.min.css" />
     <link rel="stylesheet" href="{% static 'portfolio/css/styles.css' %}">
     <style>
     #view-source {
@@ -109,11 +109,14 @@
             </div>
             <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
               <div>
+                <div style="display: inline;">
+                {% for cat in categories %}
                 <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-                  {{ post.post_category }}
-                </a><br>
-              <!-- <strong><a href=""></a></strong> -->
-                <span>{{ post.post_published|naturalday }}</span>
+                  {{ cat.title }}
+                </a>
+                {% endfor %}
+              </div>
+                <br><span>{{ post.post_published|naturalday }}</span>
               </div>
               <div class="section-spacer"></div>
               <div><a href="" onclick="fbshare()"><i class="material-icons">share</i></a></div>
@@ -158,7 +161,7 @@
       <div class="mdl-layout__obfuscator"></div>
     </div>
 <!--     <a href="https://github.com/hassanabid/hassan_portfolio" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a> -->
-   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+   <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
    <script>
     function fbshare(){
         FB.ui({
