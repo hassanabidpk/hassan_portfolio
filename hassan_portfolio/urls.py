@@ -7,7 +7,7 @@ from django.conf import settings
 urlpatterns = [
 
     url(r'^blog/', include('portfolio.urls')),
-    url(r'^hacks/', include('hacks.urls')),
+    # url(r'^hacks/', include('hacks.urls')),
     url(r'^$', include('portfolio.urls', namespace="portfolio")),
     url(r'^admin/', include(admin.site.urls)),
 
