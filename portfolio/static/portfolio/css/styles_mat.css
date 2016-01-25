@@ -260,11 +260,10 @@ html, body {
 
 .skill-inline {
 display: inline;
-margin-left: 15px;
+margin-top: 12px;
 
 }
 img.project-skill-logo {
-
   width: 30px;
-  padding-right:8px;
+  padding-right:10px;
 }
