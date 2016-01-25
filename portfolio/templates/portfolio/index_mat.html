@@ -204,6 +204,11 @@
                 </div>
                 <div class="mdl-card__supporting-text" style="margin-top: -20px;">
                   <span class="mdl-typography--font-light mdl-typography--subhead">{{ project.description }}</span>
+                  <div style="display: inline;">
+                  {% for skill in project.skills.all %}
+                  <img class="skill-logo" src="{{ skill.logo.url }}">
+                  {% endfor %}
+                </div>
                 </div>
                 <div class="mdl-card__actions">
                   {% if project.android %}
