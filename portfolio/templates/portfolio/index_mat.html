@@ -284,7 +284,9 @@
                     {% endif %}
                     <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                       <h4>{{ post.post_title}}</h4>
-                      <p>{{ post.post_content|truncatechars:340}}</p>
+                      <p>{% with description=post.post_content|safe %}
+                          {{ description|truncatechars:340 }}
+                          {% endwith %}</p>
                       <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="/blog/{{ post.id }}">
                       Read More <i class="material-icons">keyboard_arrow_right</i>
                       </a>

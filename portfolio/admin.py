@@ -37,7 +37,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 	exclude = ('slug',)
 
-admin.site.register(Post,PostAdmin)
+# admin.site.register(Post,PostAdmin)
+admin.site.register(Post)
 admin.site.register(News, NewsAdmin)
 admin.site.register(Category,CategoryAdmin)
 admin.site.register(Skill,SkillAdmin)
