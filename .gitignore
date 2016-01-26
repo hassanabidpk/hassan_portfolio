@@ -3,4 +3,4 @@
 *.DS_Store
 hassan_portfolio/settings.py
 posts/*
-
+pvenv/

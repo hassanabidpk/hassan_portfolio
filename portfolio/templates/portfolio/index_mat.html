@@ -46,7 +46,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.cyan-deep_purple.min.css" />
+      <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue_grey-purple.min.css" />
     <link rel="stylesheet" href="{% static 'portfolio/css/styles_mat.css' %}">
     <link rel="stylesheet" media="screen and (max-width: 414px)" href="{% static 'portfolio/css/styles_mat_medium.css' %}">
  <!-- Fb Tags-->
@@ -68,6 +68,24 @@
       z-index: 900;
     }
     </style>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'portfolio/favi/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'portfolio/favi/apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'portfolio/favi/apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'portfolio/favi/apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'portfolio/favi/apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'portfolio/favi/apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'portfolio/favi/apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'portfolio/favi/apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'portfolio/favi/apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'portfolio/favi/android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'portfolio/favi/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'portfolio/favi/favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'portfolio/favi/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'portfolio/favi/manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{% static 'portfolio/favi/ms-icon-144x144.png' %}">
+    <meta name="theme-color" content="#ffffff">
 
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
@@ -186,6 +204,12 @@
                 </div>
                 <div class="mdl-card__supporting-text" style="margin-top: -20px;">
                   <span class="mdl-typography--font-light mdl-typography--subhead">{{ project.description }}</span>
+                  <p></p>
+                  <div class="skill-inline">
+                  {% for skill in project.skills.all %}
+                  <img class="project-skill-logo" src="{{ skill.logo.url }}">
+                  {% endfor %}
+                </div>
                 </div>
                 <div class="mdl-card__actions">
                   {% if project.android %}

@@ -257,3 +257,13 @@ html, body {
      your background is light. */
   /*color: white;*/
 }
+
+.skill-inline {
+display: inline;
+margin-top: 12px;
+
+}
+img.project-skill-logo {
+  width: 30px;
+  padding-right:10px;
+}
