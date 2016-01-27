@@ -297,6 +297,24 @@
            </div>
          </section>
         </div>
+        <div class="mdl-layout__tab-panel" id="mooc">
+          <div class="mdl-grid">
+            {% if moocs %}
+              {% for mooc in moocs %}
+            <div class="mdl-cell mdl-cell--4-col">
+             <div class="mooc-card-image mdl-card mdl-shadow--2dp" style="background-image: url({{ mooc.course_certificate.url }})">
+              <div class="mdl-card__title mdl-card--expand"></div>
+              <div class="mdl-card__actions">
+                <span class="mooc-card-image__filename">{{ mooc.course_title }}</span>
+              </div>
+             </div>
+             </div>
+          {% endfor %}
+          </div>
+          {% else %}
+          <h3>No Mooc courses added yet</h3>
+          {% endif %}
+        </div>
         <div class="mdl-layout__tab-panel" id="posts">
            {% if blog_posts %}
              {% for post in blog_posts %}

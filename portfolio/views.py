@@ -4,12 +4,14 @@ from django.template import RequestContext, loader
 
 
 from .models import Post, News, Skill,Project
+from mooc.models import MOOC
 
 def index(request):
 	skills = Skill.objects.order_by('title')
 	projects = Project.objects.order_by('createdAt')
 	blog_posts = Post.objects.order_by('-post_published')
-	context = {"skills": skills,"projects": projects,'blog_posts': blog_posts}
+	moocs = MOOC.objects.order_by('course_completion_date')
+	context = {"skills": skills,"projects": projects,'blog_posts': blog_posts,'moocs':moocs}
 	return render(request,'portfolio/index_mat.html', context)
 
 def blog(request):

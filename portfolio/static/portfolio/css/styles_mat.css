@@ -267,3 +267,21 @@ img.project-skill-logo {
   width: 30px;
   padding-right:10px;
 }
+
+.mooc-card-image.mdl-card {
+  width: 330px;
+  height: 330px;
+  background: center / cover;
+}
+.mooc-card-image > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  /*background: rgba(0, 0, 0, 0.4);*/
+  background: #455A64;
+
+}
+.mooc-card-image__filename {
+  color: rgba(255,255,255,1);
+  font-size: 14px;
+  font-weight: 500;
+}
