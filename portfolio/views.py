@@ -23,5 +23,13 @@ def blog(request):
 def post(request,post_id):
 	post = get_object_or_404(Post,pk=post_id)
 	categories = post.category.all()
-	print(categories)
-	return render(request, 'portfolio/entry_mat.html', {'post': post,'categories':categories})
+	try:
+		next = post.get_next_by_post_published()
+	except Post.DoesNotExist:
+		next = None
+	try:
+		previous = post.get_previous_by_post_published()
+	except Post.DoesNotExist:
+		previous = None
+	context = {'post': post,'categories':categories,'next':next, 'previous': previous}
+	return render(request, 'portfolio/entry_mat.html', context)
