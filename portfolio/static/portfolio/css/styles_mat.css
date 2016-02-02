@@ -269,10 +269,11 @@ img.project-skill-logo {
 }
 
 .mooc-card-image.mdl-card {
-  width: 330px;
+  width: 398px;
   height: 330px;
   background: center / cover;
 }
+
 .mooc-card-image > .mdl-card__actions {
   height: 60px;
   padding: 16px;
